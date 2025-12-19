@@ -63,9 +63,10 @@ function displaySectionWhy(data) {
     let dDivWhy = document.createElement("div");
     dDivWhy.classList.add("d-flex");
     dDivWhy.classList.add("j-content");
+    dDivWhy.classList.add("flex");
+    dDivWhy.classList.add("wrap");
 
     let divWhy = document.createElement("div");
-    divWhy.classList.add()
 
     let paraWhy = document.createElement("p");
     paraWhy.classList.add("para-why");
@@ -81,6 +82,8 @@ function displaySectionWhy(data) {
 
     let sdDivWhy = document.createElement("div");
     sdDivWhy.classList.add("d-flex");
+    sdDivWhy.classList.add("gap");
+    sdDivWhy.classList.add("wrap")
 
     data.listeBeneficesClients.forEach((benefice, index) => {
         let thrdDivWhy = document.createElement("div");
@@ -103,7 +106,7 @@ function displaySectionWhy(data) {
     divWhy.appendChild(paraWhy);
     divWhy.appendChild(titleWhy);
     divWhy.appendChild(sdParaWhy);
-    divWhy.appendChild(sdDivWhy);
+    dDivWhy.appendChild(sdDivWhy);
     
 
 
@@ -113,6 +116,7 @@ function displaySectionWhy(data) {
 function displayCollection(data) {
     let divCollection = document.createElement("div");
     divCollection.classList.add("d-flex");
+    divCollection.classList.add("j-content");
     divCollection.classList.add("flex")
 
     let dDivCollection = document.createElement("div");
@@ -132,12 +136,15 @@ function displayCollection(data) {
 
     let divForEach = document.createElement("div");
     divForEach.classList.add("d-flex");
+    divForEach.classList.add("wrap");
+    divForEach.classList.add("gap");
 
+    
     divCollection.appendChild(dDivCollection);
-    dDivCollection.appendChild(divForEach);
     dDivCollection.appendChild(paraCollection);
     dDivCollection.appendChild(titleCollection);
     dDivCollection.appendChild(sdParaCollection);
+    divCollection.appendChild(divForEach);
 
     data.produits.forEach(produit => {
         let divProduits = document.createElement("div");
@@ -158,13 +165,13 @@ function displayCollection(data) {
         paraProduitsCollection.textContent = produit.presentation;
 
         divForEach.appendChild(divProduits);
-        divCollection.appendChild(divProduits);
         divProduits.appendChild(imgProduitsCollection);
         divProduits.appendChild(titleProduitsCollection);
         divProduits.appendChild(paraProduitsCollection);
         
     });
 
+    
     return divCollection;
 }
 

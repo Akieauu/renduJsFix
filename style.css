@@ -6,7 +6,7 @@ body {
 
 .container {
     margin: auto;
-    max-width: 2000px;
+    max-width: 1000px;
 }
 
 header {
@@ -53,8 +53,9 @@ nav a {
 }
 
 .cards {
-    background-color: aliceblue;
+    background-color: rebeccapurple;
     width: 20em;
+    border-radius: 20px;
 }
 
 #section-hero {
@@ -83,4 +84,12 @@ nav a {
 
 .marginHero {
     margin-top: 300px;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.gap {
+    gap: 20px;
 }
