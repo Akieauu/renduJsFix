@@ -1,0 +1,86 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Epilogue", sans-serif;
+}
+
+.container {
+    margin: auto;
+    max-width: 2000px;
+}
+
+header {
+    background-color: rgb(50, 48, 48);
+    color: white;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding-right: 10px;
+}
+
+.btn {
+    padding: 10px;
+
+}
+
+#a {
+    padding: 0;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.j-content {
+    justify-content: space-around;
+    align-items: center;
+}
+
+#img {
+    width: 100px;
+    height: 100px;
+}
+
+.img {
+    width: 200px;
+    height: 200px;
+}
+
+.center {
+    justify-content: center;
+}
+
+.cards {
+    background-color: aliceblue;
+    width: 20em;
+}
+
+#section-hero {
+    background-image: url("assets/section-background.jpg");
+    width: 2000px;
+    height: 1000px;
+}
+
+.flex {
+    flex-flow: column wrap;
+}
+
+.align-items {
+    align-self: center;
+}
+
+.text-align {
+    text-align: center;
+}
+
+.card {
+    background-color: red;
+    width: 500px;
+    height: 500px;
+}
+
+.marginHero {
+    margin-top: 300px;
+}
