@@ -67,6 +67,8 @@ function displaySectionWhy(data) {
     dDivWhy.classList.add("wrap");
 
     let divWhy = document.createElement("div");
+    divWhy.classList.add("section-margin");
+    divWhy.classList.add("text-align");
 
     let paraWhy = document.createElement("p");
     paraWhy.classList.add("para-why");
@@ -83,11 +85,12 @@ function displaySectionWhy(data) {
     let sdDivWhy = document.createElement("div");
     sdDivWhy.classList.add("d-flex");
     sdDivWhy.classList.add("gap");
-    sdDivWhy.classList.add("wrap")
+    sdDivWhy.classList.add("align-items");
 
     data.listeBeneficesClients.forEach((benefice, index) => {
         let thrdDivWhy = document.createElement("div");
         thrdDivWhy.classList.add("cards");
+        thrdDivWhy.classList.add("text-align");
 
         let thrdTitleWhy = document.createElement("h3");
         thrdTitleWhy.classList.add("thrdTitle-Why");
@@ -120,7 +123,8 @@ function displayCollection(data) {
     divCollection.classList.add("flex")
 
     let dDivCollection = document.createElement("div");
-    dDivCollection.classList.add();
+    dDivCollection.classList.add("section-margin");
+    dDivCollection.classList.add("text-align");
 
     let paraCollection = document.createElement("p");
     paraCollection.classList.add("para-collection");
@@ -138,6 +142,11 @@ function displayCollection(data) {
     divForEach.classList.add("d-flex");
     divForEach.classList.add("wrap");
     divForEach.classList.add("gap");
+    divForEach.classList.add("margin-left");
+    // divForEach.classList.add("j-content");
+
+    let collectionHr = document.createElement("hr");
+    
 
     
     divCollection.appendChild(dDivCollection);
@@ -145,10 +154,11 @@ function displayCollection(data) {
     dDivCollection.appendChild(titleCollection);
     dDivCollection.appendChild(sdParaCollection);
     divCollection.appendChild(divForEach);
+    divCollection.appendChild(collectionHr);
 
     data.produits.forEach(produit => {
         let divProduits = document.createElement("div");
-        divProduits.classList.add("cards");
+        divProduits.classList.add("card");
         divProduits.classList.add("text-align");
         
         let imgProduitsCollection = document.createElement("img");
@@ -196,6 +206,7 @@ function displayClients(data) {
 
     let dDivClients = document.createElement("div");
     dDivClients.classList.add("text-align");
+    dDivClients.classList.add("section-margin");
 
     let titleClients = document.createElement("h3");
     titleClients.classList.add("title-clients");
@@ -208,6 +219,8 @@ function displayClients(data) {
     let sdDivClients = document.createElement("div");
     sdDivClients.classList.add("d-flex");
     sdDivClients.classList.add("text-align");
+    sdDivClients.classList.add("gap");
+    sdDivClients.classList.add("align-items");
 
 
     divClients.appendChild(dDivClients);
@@ -218,7 +231,7 @@ function displayClients(data) {
     data.clients.forEach(client => {
 
         let thrdDivClients = document.createElement("div");
-        thrdDivClients.classList.add();
+        thrdDivClients.classList.add("cards");
 
         let occasionClients = document.createElement("h3");
         occasionClients.classList.add("occasion-clients");
@@ -245,4 +258,8 @@ function displayClients(data) {
     
     return divClients;
 
+}
+
+function displayFooter(data) {
+    
 }
